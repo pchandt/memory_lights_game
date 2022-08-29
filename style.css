@@ -3,49 +3,63 @@
   
     box-sizing: border-box;
 }
- 
 body {
+    place-self: center;
     padding: 0 30%;
 }
 
 .photoArray {
-    height: 100vh;
-    display: grid;
-    place-content: center;
-    grid-template-columns: 20% 20% 20%;
-    column-gap: 5px;
-    grid-template-rows: auto;
-    row-gap: 5px;
-    position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+        padding: 40% 19%;
+        height: 70%;
 }
 
+
 .img_box img {
-    border: 3px solid #7317ec;
-    height: 100px;
+    height: 70px;
+    border: 2px solid rgb(164, 9, 136);
     padding: 1px;
-    background-color: rgb(110, 27, 243);
+    background-color: #ab5805;
     margin: 1px;
-    box-shadow: #cf0ef5;
+    box-shadow: rgb(52, 14, 245);
     border-radius: 10px;
     position: relative;
 }
 
 .main {
     height: 100vh;
-    background-image: url("https://images.unsplash.com/photo-1619860861606-580d921d9dfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: lighten;
-  color: aqua;
-  background-attachment: fixed;
-  background-position: center;
+    background-image: url("https://images.unsplash.com/photo-1617396900799-f4ec2b43c7ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: aqua;
+    background-attachment: fixed;
+    background-position: center;
  
 }
 
-@media screen and (max-device-width: 1000px) {
-        body {
+@media screen and (max-device-width: 800px) {
+    body {
         padding: 0;
+    }
+        .main {
+        padding: 50% 10%;
+        place-self: center;
       }
+      .photoArray {
+        width: 70%;
+        height: 50%;
+    padding: 0;
+    justify-content: center;
+    margin: 15%;
       }
-     
-    
+      .img_box img {
+        height: 50px;
+
+      }
+      } 
+      
